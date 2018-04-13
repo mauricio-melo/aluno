@@ -57,7 +57,7 @@ public class AlunoController{
         return mv;
     }
 
-    @RequestMapping("{codigo}")
+    @RequestMapping("{id}")
     public ModelAndView edicao(@PathVariable("id") Aluno aluno) {
         ModelAndView mv = new ModelAndView(CADASTRO_VIEW);
         mv.addObject(aluno);

@@ -1,7 +1,6 @@
 package br.com.escola.alunos.model;
 
 import lombok.*;
-import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
 
@@ -15,7 +14,7 @@ import java.util.Date;
 
 @Data
 @Builder
-@ToString(of = {"studentId"})
+@ToString(of = {"id"})
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -27,7 +26,7 @@ public class Aluno {
     private Long id;
 
     @Column(nullable = false)
-    @NotEmpty(message = "Nome é obrigatório")
+    @NotNull(message = "Nome é obrigatório")
     @Size(max = 60, message = "O nome não pode conter mais de 60 caracteres")
     private String nome;
 
@@ -43,7 +42,7 @@ public class Aluno {
     private BigDecimal valorMensal;
 
     @Column(nullable = false)
-    @NotEmpty(message = "Celular é obrigatório")
+    @NotNull(message = "celular é obrigatório")
     @Size(max = 20, message = "O celular não pode conter mais de 20 caracteres")
     private String celular;
 

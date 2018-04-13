@@ -52,7 +52,7 @@
 	   			</thead>
 	   			<tbody>
 	   				<tr th:each="aluno : ${alunos}">
-	   					<td class="text-center" th:text="${aluno.id}">1</td>
+	   					<td class="text-center" th:text="${aluno.id}"></td>
 	   					<td th:text="${aluno.nome}"></td>
 	   					<td class="text-center" th:text="${{aluno.dataNascimento}}"></td>
 	   					<td class="text-right" th:text="|R$ ${{aluno.valorMensal}}|"></td>
